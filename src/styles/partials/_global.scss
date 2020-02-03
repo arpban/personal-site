@@ -1,0 +1,90 @@
+/* global.scss
+/* ---------------------------------------------------------- /*
+
+This file contains the global css styles. 
+
+/* Variables
+/* ---------------------------------------------------------- */
+
+:root {
+
+    /* Colours */
+    --color-primary: #2f4f4f;
+    --color-text: #333333;
+    --color-text-lighter: #666666;
+    --color-bg: #ffffff;
+    --color-links: blue;
+    --color-links-hover: blue;
+    --color-highlight: #69ff85;
+
+    /* Fonts */
+    --font-sans-serif: 'Roboto', Helvetica, -apple-system, BlinkMacSystemFont, "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    --font-serif: Times, serif;
+    --font-mono: Menlo, Courier, monospace;
+
+}
+
+/* Base Styles
+/* ---------------------------------------------------------- */
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+*:before,
+*:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+	overflow-y: scroll;
+	font-size: 62.5%;
+	font-family: var(--font-sans-serif);
+	color: var(--color-text);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+    overflow-x: hidden;
+    font-size: 1.6rem;
+    line-height: 1.6em;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0;
+    text-rendering: optimizeLegibility;
+    background: var(--color-bg);
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -moz-font-feature-settings: "liga" on;
+}
+
+img {
+	max-width: 100%;
+}
+
+.hidden {
+	display: none !important;
+}
+
+h1, h2, h3, h4, h5, h6, strong, b{
+    font-weight: 500;
+}
+
+.wrapper-1200{
+	width: 100%;
+	max-width: 1250px;
+	margin: 0 auto;
+	padding: 0 25px;
+}
+
+@media(max-width: 700px){
+    .wrapper-1200{
+        padding: 0 20px;
+    }
+}

@@ -34,8 +34,8 @@ module.exports = {
     {
       resolve: `gatsby-source-ghost`,
       options: {
-        apiUrl: `http://localhost:2368`,
-        contentApiKey: `85409230c1abfc2825fb206ac1`
+        apiUrl: `https://ghost.arpitbansal.dev`,
+        contentApiKey: `09afec2831223e214259c9839a`
       }
     },
     {

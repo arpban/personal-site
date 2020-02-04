@@ -45,6 +45,7 @@ module.exports = {
           include: `${__dirname}/src/images/icons`
         }
       }
-    }
+    },
+    `gatsby-plugin-netlify`,
   ],
 }

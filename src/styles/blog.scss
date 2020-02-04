@@ -9,6 +9,10 @@
 /* Blog Post */
 .blog-post{
     margin: 0 0 30px;
+    display: block;
+}
+
+.blog-post .blog-post-wrapper{
     text-decoration: none;
     display: block;
 }

@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "arpitbansal-personal-site",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "description": "Arpit Bansal's personal website",
+  "version": "1.0.0",
+  "author": "Arpit Bansal <arpit.bansal2010@gmail.com>",
   "dependencies": {
     "gatsby": "^2.19.7",
     "gatsby-image": "^2.2.39",
@@ -42,9 +42,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/arpban/personal-site"
   }
 }

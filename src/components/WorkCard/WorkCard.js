@@ -45,7 +45,7 @@ class WorkCard extends React.Component {
                   <div 
                     key={index} 
                     className={
-                      (this.state.activeImageIndex == index) ? 
+                      (this.state.activeImageIndex === index) ? 
                       "work-card__image work-card__image--visible" :
                       "work-card__image"
                     }
@@ -57,10 +57,10 @@ class WorkCard extends React.Component {
             </div>
 
             <div className="work-card__carousel__controls">
-              <button className={this.state.activeImageIndex == 0 ? "invisible" : ""} onClick={this.previousImage}>
+              <button className={this.state.activeImageIndex === 0 ? "invisible" : ""} onClick={this.previousImage}>
                 <ChevronLeft />
               </button>
-              <button className={this.state.activeImageIndex == this.total_images-1 ? "invisible" : ""} onClick={this.nextImage}>
+              <button className={this.state.activeImageIndex === this.total_images-1 ? "invisible" : ""} onClick={this.nextImage}>
                 <ChevronRight />
               </button>
             </div>
@@ -74,7 +74,7 @@ class WorkCard extends React.Component {
             <p className="work-card__description">{this.props.description}</p>
 
             {
-              this.props.role == null ? "" : (
+              this.props.role === null ? "" : (
                 <div className="work-card__role">
                   <strong>Role:</strong> {this.props.role}
                 </div>
@@ -82,7 +82,7 @@ class WorkCard extends React.Component {
             }
 
             {
-              this.props.duration == null ? "" : (
+              this.props.duration === null ? "" : (
                 <div className="work-card__duration">
                   <strong>Duration:</strong> {this.props.duration}
                 </div>
@@ -90,7 +90,7 @@ class WorkCard extends React.Component {
             }
             
             <div className="work-card__links">
-              {
+              {/* {
                 this.props.postLink == null ? "" : (
                   <Link to={this.props.postLink}>Learn More</Link> 
                 )
@@ -102,7 +102,8 @@ class WorkCard extends React.Component {
                 this.props.projectUrl == null ? "" : (
                   <a href={this.props.projectUrl} target="_blank" rel="noopener noreferrer">Project Url</a>
                 )
-              } 
+              }  */}
+              {this.props.children}
             </div>
           
           </div>

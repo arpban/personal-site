@@ -1,6 +1,5 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import Img from "gatsby-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -19,7 +18,7 @@ const IndexPage = ({ data }) => (
     <div className="home-page__bio">
       <div className="wrapper-1200">
         <p>Hey there 👋, I'm a full stack developer with a keen interest in product design. 
-          This blog serves as a place to document everything I learn and make.
+          This site serves as a place to document everything I learn and make.
         </p>
       </div>
     </div>
@@ -33,60 +32,14 @@ const IndexPage = ({ data }) => (
             title="Stylesheets.dev" 
             description="A theme shop, which designs and develops themes for the Ghost CMS" 
             role="Founder" 
-            duration="Aug 2018 - Present"
-            postLink="/work/stylesheets-dev"
-            projectUrl="https://stylesheets.dev"  
-          />
+            duration="Aug 2018 - Present"  
+          >
+            <a href="https://stylesheets.dev" target="_blank" rel="noopener noreferrer">Website</a>
+            <span className="separator">/</span>
+            <a href="https://creativemarket.com/stylesheetsdev" target="_blank" rel="noopener noreferrer">Creative Market</a>
+          </WorkCard>
 
-          <WorkCard 
-            images={data.testProject} 
-            title="Stylesheets.dev" 
-            description="this is a test description" 
-            role="Co Founder" 
-            duration="Jan 2019 - Present"
-            postLink="/"
-            projectUrl="https://stylesheets.dev"  
-          />
-
-          <WorkCard 
-            images={data.testProject} 
-            title="Stylesheets.dev" 
-            description="this is a test description" 
-            role="Co Founder" 
-            duration="Jan 2019 - Present"
-            postLink="/"
-            projectUrl="https://stylesheets.dev"  
-          />
-
-          <WorkCard 
-            images={data.testProject} 
-            title="Stylesheets.dev" 
-            description="this is a test description" 
-            role="Co Founder" 
-            duration="Jan 2019 - Present"
-            postLink="/"
-            projectUrl="https://stylesheets.dev"  
-          />
-
-          <WorkCard 
-            images={data.testProject} 
-            title="Stylesheets.dev" 
-            description="this is a test description" 
-            role="Co Founder" 
-            duration="Jan 2019 - Present"
-            postLink="/"
-            projectUrl="https://stylesheets.dev"  
-          />
-
-          <WorkCard 
-            images={data.testProject} 
-            title="Stylesheets.dev" 
-            description="this is a test description" 
-            role="Co Founder" 
-            duration="Jan 2019 - Present"
-            postLink="/"
-            projectUrl="https://stylesheets.dev"  
-          />
+          
         
         </div>
       </div>
@@ -101,7 +54,7 @@ export default IndexPage
 
 export const query = graphql`
   query {
-    testProject: allFile(filter: {extension: {regex: "/(jpg)|(png)|(jpeg)/"}, relativeDirectory: {eq: "work/test-project"}}) {
+    testProject: allFile(filter: {extension: {regex: "/(jpg)|(png)|(jpeg)/"}, relativeDirectory: {eq: "work/test-project"}}, sort: {fields: name}) {
       edges{
         node{
           childImageSharp {
@@ -113,7 +66,7 @@ export const query = graphql`
       }
     }
 
-    stylesheetsDev: allFile(filter: {extension: {regex: "/(jpg)|(png)|(jpeg)/"}, relativeDirectory: {eq: "work/stylesheets-dev"}}) {
+    stylesheetsDev: allFile(filter: {extension: {regex: "/(jpg)|(png)|(jpeg)/"}, relativeDirectory: {eq: "work/stylesheets-dev"}}, sort: {fields: name}) {
       edges{
         node{
           childImageSharp {

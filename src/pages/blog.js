@@ -30,14 +30,16 @@ class BlogPage extends React.Component {
           <div className="blog-main">
             <div className="blog-feed">
               {
-                this.props.data.allGhostPost.edges.map(({node}) => (
-                  <Link to={`/blog/${node.slug}`} className="blog-post">
-                    <h2>{node.title}</h2>
-                    <p>
-                      {node.excerpt} 
-                      <time>{node.published_at}</time>
-                    </p>
-                  </Link>
+                this.props.data.allGhostPost.edges.map(({node}, index) => (
+                  <div className="blog-post" key={index}>
+                    <Link className="blog-post-wrapper" to={`/blog/${node.slug}`}>
+                      <h2>{node.title}</h2>
+                      <p>
+                        {node.excerpt} 
+                        <time>{node.published_at}</time>
+                      </p>
+                    </Link>
+                  </div>
                 ))
               }
             </div>

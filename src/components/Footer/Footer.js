@@ -1,13 +1,12 @@
 import React from 'react'
-import { Link } from 'gatsby'
 
 import "./Footer.scss"
 import Twitter from '../../images/icons/twitter.svg'
 import Dribbble from '../../images/icons/dribbble.svg'
 import Linkedin from '../../images/icons/linkedin.svg'
 import Github from '../../images/icons/github.svg'
-import Gmail from '../../images/icons/gmail.svg'
-import Gumroad from '../../images/icons/gumroad.svg'
+// import Gmail from '../../images/icons/gmail.svg'
+// import Gumroad from '../../images/icons/gumroad.svg'
 
 const Footer = () => (
   <footer className="site-footer">

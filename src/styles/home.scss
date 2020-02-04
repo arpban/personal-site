@@ -137,7 +137,13 @@
     color: var(--color-text-lighter);
     font-size: 1.4rem;
     text-decoration: none;
-    border-bottom: 1px solid var(--color-text-lighter);
+    border-bottom: 1px solid #a9a8a8;
+}
+
+.work-card__links .separator{
+    padding: 0 8px;
+    color: var(--color-text-lighter);
+    font-size: 1.4rem;
 }
 
 /* Media Queries */

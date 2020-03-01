@@ -43,7 +43,7 @@ const IndexPage = ({ data }) => (
             images={data.containous} 
             title="Containous" 
             description="Worked with Containous and developed their site in Ghost" 
-            role="Frontend Developer" 
+            role="Frontend Developer (Freelance)" 
             duration="Oct 2019 - Present"  
           >
             <a href="https://containo.us" target="_blank" rel="noopener noreferrer">Website</a>

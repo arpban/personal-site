@@ -9,4 +9,8 @@
   font-family: var(--font-sans-serif);
   display: block;
   line-height: 1em;
+
+  &:hover {
+    color: var(--color-text);
+  }
 }

@@ -1,42 +1,46 @@
-.site-footer{
-    background-color: #ececec;
-    .bottom{
-        padding: 30px 0;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-}
+.site-footer {
+  background-color: var(--color-footer-bg);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 
-.site-footer__copyright{
-    color: #585858;
-    transition: all 0.2s;
-    font-size: 1.4rem;
-    &:hover{
-        color: #2f2f2f;
-    }
-}
-
-.site-footer__social-links{
+  .bottom {
+    padding: 30px 0;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
-.site-footer__social-links a{
-    width: 20px;
-    height: 20px;
-    margin-left: 8px;
-    transition: all 0.2s;
-    svg{
-        fill: #585858;
-        width: 100%;
-        height: 100%;
+.site-footer__copyright {
+  color: var(--color-footer-fg);
+  transition: all 0.2s;
+  font-size: 1.4rem;
+  &:hover {
+    color: var(--color-footer-fg);
+  }
+}
+
+.site-footer__social-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.site-footer__social-links a {
+  width: 20px;
+  height: 20px;
+  margin-left: 8px;
+  transition: all 0.2s;
+  svg {
+    fill: var(--color-footer-fg);
+    width: 100%;
+    height: 100%;
+  }
+  &:hover {
+    svg {
+      fill: var(--color-footer-fg);
     }
-    &:hover{
-        svg{
-            fill: #2f2f2f;
-        }
-    }
+  }
 }

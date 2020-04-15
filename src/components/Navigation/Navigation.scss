@@ -1,40 +1,41 @@
-/* Site Navigation 
+/* Site Navigation
 /* -------------------------------------------------- */
 
-.site-nav{
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    padding: 20px 0;
-    z-index: 100;
+.site-nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  padding: 20px 0;
+  z-index: 100;
 }
 
-.site-nav-item{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 4px 0px 0px 4px;
-    overflow: hidden;
+.site-nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px 0px 0px 4px;
+  overflow: hidden;
 }
 
-.site-nav-item__link{
-    transform: rotate(180deg);
-    padding: 20px 7px;
-    writing-mode: tb-rl;
-    margin: 0;
-    font-size: 1.5rem;
-    text-decoration: none;
+.site-nav-item__link {
+  transform: rotate(180deg);
+  padding: 20px 7px;
+  writing-mode: tb-rl;
+  margin: 0;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: var(--color-text);
+  transition: all 0.1s;
+  width: 39px;
+
+  &:hover {
+    background-color: var(--color-primary--light);
     color: var(--color-text);
-    transition: all 0.1s;
-    width: 39px;
-    
-    &:hover{
-        background-color: #eeeeee;
-    }
+  }
 
-    &.site-nav-item__link--active{
-        background: var(--color-primary);
-        color: white;
-    }
+  &.site-nav-item__link--active {
+    background: var(--color-primary);
+    color: white;
+  }
 }

@@ -8,7 +8,7 @@ import Footer from "../components/Footer/Footer"
 
 import '../styles/blog.scss'
 
-class BlogPage extends React.Component {
+class NotesPage extends React.Component {
   constructor(props) {
     super(props)
   }
@@ -16,7 +16,7 @@ class BlogPage extends React.Component {
   render() {
     return (
       <Layout viewClassName="blog-page">
-        <SEO title="Blog" />
+        <SEO title="Notes" />
 
         <Header />
 
@@ -55,11 +55,11 @@ class BlogPage extends React.Component {
   }
 }
 
-export default BlogPage
+export default NotesPage
 
 export const query = graphql`
   query {
-    allGhostPost(sort: {order: DESC, fields: published_at}, filter: {primary_tag: {slug: {eq: "blog"}}}) {
+    allGhostPost(sort: {order: DESC, fields: updated_at}, filter: {primary_tag: {slug: {eq: "notes"}}}) {
       edges {
         node {
           feature_image

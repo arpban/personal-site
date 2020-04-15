@@ -10,20 +10,20 @@ import Footer from "../components/Footer/Footer"
 
 import "../styles/post.scss"
 
-class Post extends React.Component{
-  constructor(props){
+class Post extends React.Component {
+  constructor(props) {
     super(props)
   }
 
-  componentDidMount(){
+  componentDidMount() {
     // Set up gallery if present in the article
     var images = document.querySelectorAll('.kg-gallery-image img');
     images.forEach(function (image) {
-        var container = image.closest('.kg-gallery-image');
-        var width = image.attributes.width.value;
-        var height = image.attributes.height.value;
-        var ratio = width / height;
-        container.style.flex = ratio + ' 1 0%';
+      var container = image.closest('.kg-gallery-image');
+      var width = image.attributes.width.value;
+      var height = image.attributes.height.value;
+      var ratio = width / height;
+      container.style.flex = ratio + ' 1 0%';
     });
   }
 
@@ -40,10 +40,10 @@ class Post extends React.Component{
 
         <article className="post">
           <header className="post__header">
-            { post.feature_image ?
+            {post.feature_image ?
               <figure className="post__feature-image">
-                <img src={ post.feature_image } alt={ post.title } />
-              </figure> : null 
+                <img src={post.feature_image} alt={post.title} />
+              </figure> : null
             }
             <h1 className="post__title">{post.title}</h1>
             <time>{post.published_at_pretty}</time>
@@ -75,7 +75,7 @@ const Post = ({ data, location }) => {
           { post.feature_image ?
             <figure className="post__feature-image">
               <img src={ post.feature_image } alt={ post.title } />
-            </figure> : null 
+            </figure> : null
           }
           <h1 className="post__title">{post.title}</h1>
           <time>{post.published_at_pretty}</time>
@@ -91,12 +91,12 @@ const Post = ({ data, location }) => {
 
 Post.propTypes = {
   data: PropTypes.shape({
-      ghostPost: PropTypes.shape({
-          codeinjection_styles: PropTypes.object,
-          title: PropTypes.string.isRequired,
-          html: PropTypes.string.isRequired,
-          feature_image: PropTypes.string,
-      }).isRequired,
+    ghostPost: PropTypes.shape({
+      codeinjection_styles: PropTypes.object,
+      title: PropTypes.string.isRequired,
+      html: PropTypes.string.isRequired,
+      feature_image: PropTypes.string,
+    }).isRequired,
   }).isRequired,
   location: PropTypes.object.isRequired,
 }

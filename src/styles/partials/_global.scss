@@ -8,17 +8,17 @@ This file contains the global css styles.
 
 :root {
   /* Colours */
-  --color-primary: #4169e1;
+  --color-primary: #0003ff;
   --color-primary--darker: #4169e1;
-  --color-primary--light: #f1f3f9;
+  --color-primary--light: #75758617;
   --color-text: #333333;
   --color-text-lighter: #666666;
   --color-bg: #ffffff;
   --color-links: var(--color-primary);
   --color-links-hover: var(--color-primary--darker);
   --color-highlight: #69ff85;
-  --color-footer-bg: var(--color-primary--light);
-  --color-footer-fg: #a2a6bd;
+  --color-footer-bg: #75758617;
+  --color-footer-fg: #626377;
 
   /* Fonts */
   --font-sans-serif: "Roboto", Helvetica, -apple-system, BlinkMacSystemFont,
@@ -98,13 +98,13 @@ b {
 
 @media (max-width: 700px) {
   .wrapper-1200 {
-    padding: 0 20px;
+    // padding: 0 20px;
   }
 }
 
 /* Wrapper for site main content */
 .site-main {
-  margin: 0 0 85px; // bottom margin equal to height of footer
+  margin: 0 0 135px; // bottom margin equal to height of footer
 }
 
 /* Links */

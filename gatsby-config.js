@@ -21,8 +21,8 @@ module.exports = {
         name: `arpit-bansal`,
         short_name: `arpit-bansal`,
         start_url: `/`,
-        background_color: `#333`,
-        theme_color: `#333`,
+        background_color: `#0003ff`,
+        theme_color: `#0003ff`,
         display: `minimal-ui`,
         icon: `src/images/site-icon.png`, // This path is relative to the root of the site.
       },

@@ -35,7 +35,7 @@ const WorkPage = ({ data }) => (
             <WorkCard
               images={data.containous}
               title="Containous"
-              description="Worked with Containous and developed their site in Ghost"
+              description="Worked with Containous to develop the company website in Ghost"
               role="Frontend Developer (Freelance)"
               duration="Oct 2019 - Present"
             >

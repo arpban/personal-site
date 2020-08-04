@@ -4,37 +4,7 @@ import { Link } from 'gatsby'
 
 import "./Navigation.scss"
 
-/**
-* Navigation component
-*
-* The Navigation component takes an array of your Ghost
-* navigation property that is fetched from the settings.
-* It differentiates between absolute (external) and relative link (internal).
-*
-*/
-/*
-const Navigation = ({ data }) => (
-    <div className="site-nav">
-        {data.map((navItem, i) => {
-            if (navItem.url.match(/^\s?http(s?)/gi)) {
-                return (
-                   <div className="site-nav-item" key={i}>
-                       <a className="site-nav-item__link" href={navItem.url} target="_blank" rel="noopener noreferrer">{navItem.label}</a>
-                   </div>
-                )
-            } else {
-                return (
-                    <div className="site-nav-item" key={i}>
-                        <Link className="site-nav-item__link" activeClassName="site-nav-item__link--active" to={navItem.url}>{navItem.label}</Link>
-                    </div>
-                )
-            }
-        })}
-    </div>
-)
-*/
-
-const Navigation = ({ }) => (
+const Navigation = () => (
   <div className="site-nav">
     <div className="site-nav-item">
       <Link className="site-nav-item__link" activeClassName="site-nav-item__link--active" to="/">About</Link>
@@ -53,14 +23,5 @@ const Navigation = ({ }) => (
     </div>
   </div>
 )
-
-// Navigation.propTypes = {
-//     data: PropTypes.arrayOf(
-//         PropTypes.shape({
-//             label: PropTypes.string.isRequired,
-//             url: PropTypes.string.isRequired,
-//         }).isRequired,
-//     ).isRequired
-// }
 
 export default Navigation

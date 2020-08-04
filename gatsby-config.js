@@ -47,5 +47,14 @@ module.exports = {
       }
     },
     `gatsby-plugin-netlify`,
+    {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        // Setting a color is optional.
+        color: `#0003ff`,
+        // Disable the loading spinner.
+        showSpinner: false,
+      },
+    },
   ],
 }

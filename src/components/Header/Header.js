@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 
 import "./Header.scss"
 
-const Header = ({}) => (
+const Header = () => (
   <header className="site-header">
     <div className="wrapper-1200">
       <Link className="site-header__logo" to="/">Arpit Bansal</Link>

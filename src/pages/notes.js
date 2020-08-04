@@ -9,9 +9,6 @@ import Footer from "../components/Footer/Footer"
 import '../styles/blog.scss'
 
 class NotesPage extends React.Component {
-  constructor(props) {
-    super(props)
-  }
 
   render() {
     return (

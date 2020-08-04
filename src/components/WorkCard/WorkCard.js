@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import Img from "gatsby-image"
 import { ChevronLeft, ChevronRight } from "react-feather"
 
@@ -19,7 +18,7 @@ class WorkCard extends React.Component {
   nextImage(){
     if(this.state.activeImageIndex < this.total_images-1){
       this.setState({
-        activeImageIndex: ++this.state.activeImageIndex
+        activeImageIndex: this.state.activeImageIndex + 1
       })
     }
   }
@@ -27,7 +26,7 @@ class WorkCard extends React.Component {
   previousImage(){
     if(this.state.activeImageIndex > 0){
       this.setState({
-        activeImageIndex: --this.state.activeImageIndex
+        activeImageIndex: this.state.activeImageIndex - 1
       })
     }
   }

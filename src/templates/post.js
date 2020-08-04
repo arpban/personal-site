@@ -4,16 +4,10 @@ import { graphql, Link } from 'gatsby'
 import { ArrowLeftCircle } from "react-feather"
 
 import Layout from '../components/layout'
-import SEO from '../components/seo'
-import Header from "../components/Header/Header"
-import Footer from "../components/Footer/Footer"
 
 import "../styles/post.scss"
 
 class Post extends React.Component {
-  constructor(props) {
-    super(props)
-  }
 
   componentDidMount() {
     // Set up gallery if present in the article

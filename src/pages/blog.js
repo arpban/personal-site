@@ -9,10 +9,6 @@ import Footer from "../components/Footer/Footer"
 import '../styles/blog.scss'
 
 class BlogPage extends React.Component {
-  constructor(props) {
-    super(props)
-  }
-
   render() {
     return (
       <Layout viewClassName="blog-page">

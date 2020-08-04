@@ -5,7 +5,7 @@ import SEO from "../components/seo"
 import Header from "../components/Header/Header"
 import Footer from "../components/Footer/Footer"
 
-const ContactPage = ({ }) => (
+const ContactPage = () => (
   <Layout viewClassName="contact-page">
     <SEO title="Contact" />
 

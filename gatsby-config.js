@@ -35,16 +35,16 @@ module.exports = {
       resolve: `gatsby-source-ghost`,
       options: {
         apiUrl: `https://ghost.arpitbansal.dev`,
-        contentApiKey: `09afec2831223e214259c9839a`
-      }
+        contentApiKey: `09afec2831223e214259c9839a`,
+      },
     },
     {
-      resolve: 'gatsby-plugin-react-svg',
+      resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
-          include: `${__dirname}/src/images/icons`
-        }
-      }
+          include: `${__dirname}/src/images/icons`,
+        },
+      },
     },
     `gatsby-plugin-netlify`,
     {
@@ -54,6 +54,15 @@ module.exports = {
         color: `#0003ff`,
         // Disable the loading spinner.
         showSpinner: false,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        // You can add multiple tracking ids and a pageview event will be fired for all of them.
+        trackingIds: [
+          "G-1WQH16ZSCV", // Google Analytics / GA
+        ],
       },
     },
   ],

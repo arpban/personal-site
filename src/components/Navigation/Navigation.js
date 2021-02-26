@@ -1,25 +1,56 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Link } from 'gatsby'
+import React from "react"
+import PropTypes from "prop-types"
+import { Link } from "gatsby"
 
 import "./Navigation.scss"
 
 const Navigation = () => (
   <div className="site-nav">
     <div className="site-nav-item">
-      <Link className="site-nav-item__link" activeClassName="site-nav-item__link--active" to="/">About</Link>
+      <Link
+        className="site-nav-item__link"
+        activeClassName="site-nav-item__link--active"
+        to="/"
+      >
+        About
+      </Link>
     </div>
     <div className="site-nav-item">
-      <Link className="site-nav-item__link" activeClassName="site-nav-item__link--active" to="/work">Work</Link>
+      <Link
+        className="site-nav-item__link"
+        activeClassName="site-nav-item__link--active"
+        to="/work"
+      >
+        Work
+      </Link>
     </div>
     <div className="site-nav-item">
-      <Link className="site-nav-item__link" activeClassName="site-nav-item__link--active" to="/notes">Notes</Link>
+      <Link
+        className="site-nav-item__link"
+        activeClassName="site-nav-item__link--active"
+        to="/blog"
+      >
+        Blog
+      </Link>
     </div>
     <div className="site-nav-item">
-      <Link className="site-nav-item__link" activeClassName="site-nav-item__link--active" to="/blog">Blog</Link>
+      <Link
+        className="site-nav-item__link"
+        activeClassName="site-nav-item__link--active"
+        to="/notes"
+      >
+        Notes
+      </Link>
     </div>
     <div className="site-nav-item">
-      <Link className="site-nav-item__link" activeClassName="site-nav-item__link--active" to="/contact">Contact</Link>
+      <a
+        className="site-nav-item__link"
+        activeClassName="site-nav-item__link--active"
+        href="mailto:arpit@stylesheets.dev"
+        target="_blank"
+      >
+        Contact
+      </a>
     </div>
   </div>
 )

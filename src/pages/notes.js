@@ -1,15 +1,14 @@
-import React from 'react'
-import { Link, graphql } from 'gatsby'
+import React from "react"
+import { Link, graphql } from "gatsby"
 
-import Layout from '../components/layout'
-import SEO from '../components/seo'
+import Layout from "../components/layout"
+import SEO from "../components/seo"
 import Header from "../components/Header/Header"
 import Footer from "../components/Footer/Footer"
 
-import '../styles/blog.scss'
+import "../styles/blog.scss"
 
 class NotesPage extends React.Component {
-
   render() {
     return (
       <Layout viewClassName="blog-page">
@@ -27,26 +26,28 @@ class NotesPage extends React.Component {
 
             <div className="blog-main">
               <div className="blog-feed">
-                {
-                  this.props.data.allGhostPost.edges.map(({ node }, index) => (
-                    <div className="blog-post" key={index}>
-                      <Link className="blog-post-wrapper" to={`/blog/${node.slug}`}>
-                        <h2>{node.title}</h2>
-                        <p>
-                          {node.excerpt}
-                          <time>{node.published_at}</time>
-                        </p>
-                      </Link>
-                    </div>
-                  ))
-                }
+                {this.props.data.allGhostPost.edges.map(({ node }, index) => (
+                  <div className="blog-post" key={index}>
+                    <Link
+                      className="blog-post-wrapper"
+                      to={`/notes/${node.slug}/`}
+                    >
+                      <h2>{node.title}</h2>
+                      <p>
+                        {node.excerpt.length > 250
+                          ? node.excerpt.slice(0, 250) + "..."
+                          : node.excerpt}
+                        <time>{node.published_at}</time>
+                      </p>
+                    </Link>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
         </div>
 
         <Footer />
-
       </Layout>
     )
   }
@@ -56,7 +57,10 @@ export default NotesPage
 
 export const query = graphql`
   query {
-    allGhostPost(sort: {order: DESC, fields: updated_at}, filter: {primary_tag: {slug: {eq: "notes"}}}) {
+    allGhostPost(
+      sort: { order: DESC, fields: updated_at }
+      filter: { primary_tag: { slug: { eq: "notes" } } }
+    ) {
       edges {
         node {
           feature_image

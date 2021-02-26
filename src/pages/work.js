@@ -19,7 +19,6 @@ const WorkPage = ({ data }) => (
       <div className="work">
         <div className="wrapper-1200">
           <div className="work-cards">
-
             <WorkCard
               images={data.stylesheetsDev}
               title="Stylesheets.dev"
@@ -27,9 +26,21 @@ const WorkPage = ({ data }) => (
               role="Founder"
               duration="Aug 2018 - Present"
             >
-              <a href="https://stylesheets.dev" target="_blank" rel="noopener noreferrer">Website</a>
+              <a
+                href="https://stylesheets.dev"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Website
+              </a>
               <span className="separator">/</span>
-              <a href="https://creativemarket.com/stylesheetsdev" target="_blank" rel="noopener noreferrer">Creative Market</a>
+              <a
+                href="https://creativemarket.com/stylesheetsdev"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Creative Market
+              </a>
             </WorkCard>
 
             <WorkCard
@@ -39,7 +50,13 @@ const WorkPage = ({ data }) => (
               role="Frontend Developer (Freelance)"
               duration="Oct 2019 - Present"
             >
-              <a href="https://containo.us" target="_blank" rel="noopener noreferrer">Website</a>
+              <a
+                href="https://containo.us"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Website
+              </a>
             </WorkCard>
 
             <WorkCard
@@ -47,9 +64,8 @@ const WorkPage = ({ data }) => (
               title="Axelerant"
               description="Worked full time as frontend developer at Axelerant"
               role="Frontend Developer"
-              duration="Jan 2020 - Present"
-            >
-            </WorkCard>
+              duration="Jan 2020 - Feb 2021"
+            ></WorkCard>
 
             <WorkCard
               images={data.inclist}
@@ -58,7 +74,13 @@ const WorkPage = ({ data }) => (
               role="Founder, Full Stack Developer"
               duration="Feb 2018 - Sep 2018"
             >
-              <a href="https://inclist.co" target="_blank" rel="noopener noreferrer">Website</a>
+              <a
+                href="https://inclist.co"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Website
+              </a>
             </WorkCard>
 
             <WorkCard
@@ -68,18 +90,28 @@ const WorkPage = ({ data }) => (
               role="Founder"
               duration="Jan 2017 - Feb 2018"
             >
-              <a href="https://umbrellanote.com" target="_blank" rel="noopener noreferrer">Website</a>
+              <a
+                href="https://umbrellanote.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Website
+              </a>
               <span className="separator">/</span>
-              <a href="https://github.com/arpban/UmbrellaNote" target="_blank" rel="noopener noreferrer">Github</a>
+              <a
+                href="https://github.com/arpban/UmbrellaNote"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Github
+              </a>
             </WorkCard>
-
           </div>
         </div>
       </div>
     </div>
 
     <Footer />
-
   </Layout>
 )
 
@@ -87,9 +119,15 @@ export default WorkPage
 
 export const query = graphql`
   query {
-    stylesheetsDev: allFile(filter: {extension: {regex: "/(jpg)|(png)|(jpeg)/"}, relativeDirectory: {eq: "work/stylesheets-dev"}}, sort: {fields: name}) {
-      edges{
-        node{
+    stylesheetsDev: allFile(
+      filter: {
+        extension: { regex: "/(jpg)|(png)|(jpeg)/" }
+        relativeDirectory: { eq: "work/stylesheets-dev" }
+      }
+      sort: { fields: name }
+    ) {
+      edges {
+        node {
           childImageSharp {
             fluid(maxWidth: 350) {
               ...GatsbyImageSharpFluid
@@ -99,9 +137,15 @@ export const query = graphql`
       }
     }
 
-    inclist: allFile(filter: {extension: {regex: "/(jpg)|(png)|(jpeg)/"}, relativeDirectory: {eq: "work/inclist"}}, sort: {fields: name}) {
-      edges{
-        node{
+    inclist: allFile(
+      filter: {
+        extension: { regex: "/(jpg)|(png)|(jpeg)/" }
+        relativeDirectory: { eq: "work/inclist" }
+      }
+      sort: { fields: name }
+    ) {
+      edges {
+        node {
           childImageSharp {
             fluid(maxWidth: 350) {
               ...GatsbyImageSharpFluid
@@ -111,9 +155,15 @@ export const query = graphql`
       }
     }
 
-    umbrellaNote: allFile(filter: {extension: {regex: "/(jpg)|(png)|(jpeg)/"}, relativeDirectory: {eq: "work/umbrella-note"}}, sort: {fields: name}) {
-      edges{
-        node{
+    umbrellaNote: allFile(
+      filter: {
+        extension: { regex: "/(jpg)|(png)|(jpeg)/" }
+        relativeDirectory: { eq: "work/umbrella-note" }
+      }
+      sort: { fields: name }
+    ) {
+      edges {
+        node {
           childImageSharp {
             fluid(maxWidth: 350) {
               ...GatsbyImageSharpFluid
@@ -123,9 +173,15 @@ export const query = graphql`
       }
     }
 
-    containous: allFile(filter: {extension: {regex: "/(jpg)|(png)|(jpeg)/"}, relativeDirectory: {eq: "work/containous"}}, sort: {fields: name}) {
-      edges{
-        node{
+    containous: allFile(
+      filter: {
+        extension: { regex: "/(jpg)|(png)|(jpeg)/" }
+        relativeDirectory: { eq: "work/containous" }
+      }
+      sort: { fields: name }
+    ) {
+      edges {
+        node {
           childImageSharp {
             fluid(maxWidth: 350) {
               ...GatsbyImageSharpFluid
@@ -135,9 +191,15 @@ export const query = graphql`
       }
     }
 
-    axelerant: allFile(filter: {extension: {regex: "/(jpg)|(png)|(jpeg)/"}, relativeDirectory: {eq: "work/axelerant"}}, sort: {fields: name}) {
-      edges{
-        node{
+    axelerant: allFile(
+      filter: {
+        extension: { regex: "/(jpg)|(png)|(jpeg)/" }
+        relativeDirectory: { eq: "work/axelerant" }
+      }
+      sort: { fields: name }
+    ) {
+      edges {
+        node {
           childImageSharp {
             fluid(maxWidth: 350) {
               ...GatsbyImageSharpFluid

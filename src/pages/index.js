@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -17,16 +17,36 @@ const IndexPage = ({ data }) => (
     <div className="site-main">
       <div className="home-page__bio">
         <div className="wrapper-1200">
-          <p>A full-stack developer 👨‍💻. Currently working as a frontend developer at <a href="https://axelerant.com" target="_blank">Axelerant</a>. Founder of <a href="https://stylesheets.dev" target="_blank">Stylesheets.dev</a>. Previously created Umbrella Note and Inclist.
-          </p>
+          <p>Hey there 👋, </p>
 
-          <p>This site serves as a place to document everything I learn and make. Check out my latest work <a href="/work">here</a>.</p>
+          <p>
+            My name is Arpit Bansal. I'm a frontend developer and UI designer.
+            Currently, I run a project called{" "}
+            <a href="https://stylesheets.dev" target="_blank">
+              Stylesheets.dev
+            </a>{" "}
+            – which is a theme shop for some cool CMS platforms like Ghost.
+          </p>
+          <p>
+            I also work with various startups as a freelance developer with a
+            focus on React and Jamstack ecosystem. If you have a work
+            opportunity that you'd like to discuss, then you can reach out to me
+            through{" "}
+            <a href="mailto:arpit@stylesheets.dev" target="_blank">
+              Email
+            </a>
+            .
+          </p>
+          <p>
+            This site serves as a place to document some of the things I learn
+            and make. Feel free to check out the <Link to="/blog/">Blog</Link>.{" "}
+          </p>
+          <p>Thank you!</p>
         </div>
       </div>
     </div>
 
     <Footer />
-
   </Layout>
 )
 

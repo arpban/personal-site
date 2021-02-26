@@ -12,9 +12,7 @@ const ContactPage = () => (
     <Header />
 
     <div className="site-main">
-      <div className="wrapper-1200">
-        Email: arpit.bansal2010@gmail.com
-      </div>
+      <div className="wrapper-1200">Email: arpit@stylesheets.dev</div>
     </div>
 
     <Footer />

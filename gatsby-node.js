@@ -7,45 +7,71 @@
 const path = require(`path`)
 
 exports.createPages = async ({ graphql, actions }) => {
-    const { createPage } = actions
+  const { createPage } = actions
 
-    const result = await graphql(`
-        {
-            allGhostPost(sort: { order: ASC, fields: published_at }) {
-                edges {
-                    node {
-                        slug
-                    }
-                }
-            }
+  const result = await graphql(`
+    {
+      blogPosts: allGhostPost(
+        sort: { order: ASC, fields: published_at }
+        filter: { primary_tag: { slug: { eq: "blog" } } }
+      ) {
+        edges {
+          node {
+            slug
+          }
         }
-    `)
-
-    // Check for any errors
-    if (result.errors) {
-        throw new Error(result.errors)
+      }
+      notes: allGhostPost(
+        sort: { order: ASC, fields: published_at }
+        filter: { primary_tag: { slug: { eq: "notes" } } }
+      ) {
+        edges {
+          node {
+            slug
+          }
+        }
+      }
     }
+  `)
 
-    // Extract query results
-    const posts = result.data.allGhostPost.edges
+  // Check for any errors
+  if (result.errors) {
+    throw new Error(result.errors)
+  }
 
-    // Load templates
-    const postTemplate = path.resolve(`./src/templates/post.js`)
+  // Extract query results
+  const blogPosts = result.data.blogPosts.edges
+  const notes = result.data.notes.edges
 
-    // Create post pages
-    posts.forEach(({ node }) => {
-        // This part here defines, that our posts will use
-        // a `/:slug/` permalink.
-        node.url = `/blog/${node.slug}/`
+  // Load templates
+  const postTemplate = path.resolve(`./src/templates/post.js`)
 
-        createPage({
-            path: node.url,
-            component: postTemplate,
-            context: {
-                // Data passed to context is available
-                // in page queries as GraphQL variables.
-                slug: node.slug,
-            },
-        })
+  // Create post pages
+  blogPosts.forEach(({ node }) => {
+    // This part here defines, that our posts will use
+    // a `/:slug/` permalink.
+    node.url = `/blog/${node.slug}/`
+
+    createPage({
+      path: node.url,
+      component: postTemplate,
+      context: {
+        // Data passed to context is available
+        // in page queries as GraphQL variables.
+        slug: node.slug,
+      },
     })
+  })
+
+  notes.forEach(({ node }) => {
+    node.url = `/notes/${node.slug}/`
+
+    createPage({
+      path: node.url,
+      component: postTemplate,
+      context: {
+        slug: node.slug,
+      },
+    })
+  })
 }

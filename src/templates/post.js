@@ -1,30 +1,31 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { graphql, Link } from 'gatsby'
+import React from "react"
+import PropTypes from "prop-types"
+import { graphql, Link } from "gatsby"
 import { ArrowLeftCircle } from "react-feather"
+import SEO from "../components/seo"
 
-import Layout from '../components/layout'
+import Layout from "../components/layout"
 
 import "../styles/post.scss"
 
 class Post extends React.Component {
-
   componentDidMount() {
     // Set up gallery if present in the article
-    var images = document.querySelectorAll('.kg-gallery-image img');
-    images.forEach(function (image) {
-      var container = image.closest('.kg-gallery-image');
-      var width = image.attributes.width.value;
-      var height = image.attributes.height.value;
-      var ratio = width / height;
-      container.style.flex = ratio + ' 1 0%';
-    });
+    var images = document.querySelectorAll(".kg-gallery-image img")
+    images.forEach(function(image) {
+      var container = image.closest(".kg-gallery-image")
+      var width = image.attributes.width.value
+      var height = image.attributes.height.value
+      var ratio = width / height
+      container.style.flex = ratio + " 1 0%"
+    })
   }
 
   render() {
     const post = this.props.data.ghostPost
     return (
       <Layout viewClassName="post-template">
+        <SEO title={post.title} />
 
         <div className="back-button">
           <Link to="/blog">
@@ -34,18 +35,20 @@ class Post extends React.Component {
 
         <article className="post">
           <header className="post__header">
-            {post.feature_image ?
+            {post.feature_image ? (
               <figure className="post__feature-image">
                 <img src={post.feature_image} alt={post.title} />
-              </figure> : null
-            }
+              </figure>
+            ) : null}
             <h1 className="post__title">{post.title}</h1>
             <time>{post.published_at_pretty}</time>
           </header>
 
-          <div className="post__body" dangerouslySetInnerHTML={{ __html: post.html }}></div>
+          <div
+            className="post__body"
+            dangerouslySetInnerHTML={{ __html: post.html }}
+          ></div>
         </article>
-
       </Layout>
     )
   }
@@ -99,8 +102,8 @@ export default Post
 
 export const postQuery = graphql`
   query($slug: String!) {
-      ghostPost(slug: { eq: $slug }) {
-          ...GhostPostFields
-      }
+    ghostPost(slug: { eq: $slug }) {
+      ...GhostPostFields
+    }
   }
 `

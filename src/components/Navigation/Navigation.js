@@ -19,7 +19,7 @@ const Navigation = () => (
       <Link
         className="site-nav-item__link"
         activeClassName="site-nav-item__link--active"
-        to="/work"
+        to="/work/"
       >
         Work
       </Link>
@@ -28,7 +28,7 @@ const Navigation = () => (
       <Link
         className="site-nav-item__link"
         activeClassName="site-nav-item__link--active"
-        to="/blog"
+        to="/blog/"
       >
         Blog
       </Link>
@@ -37,7 +37,7 @@ const Navigation = () => (
       <Link
         className="site-nav-item__link"
         activeClassName="site-nav-item__link--active"
-        to="/notes"
+        to="/notes/"
       >
         Notes
       </Link>
@@ -49,7 +49,7 @@ const Navigation = () => (
         href="mailto:arpit@stylesheets.dev"
         target="_blank"
       >
-        Contact
+        Email
       </a>
     </div>
   </div>

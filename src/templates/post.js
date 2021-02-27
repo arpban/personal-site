@@ -28,7 +28,7 @@ class Post extends React.Component {
         <SEO title={post.title} />
 
         <div className="back-button">
-          <Link to="/blog">
+          <Link to={`/${post.primary_tag.slug}/`}>
             <ArrowLeftCircle />
           </Link>
         </div>
